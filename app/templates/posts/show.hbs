@@ -1,3 +1,6 @@
 Post Show
-{{title}}
+<h3>{{title}}</h3>
+{{#each comment in model.comments}}
+  <p>{{comment.body}} - {{comment.username}}</p>
+{{/each}}
 {{outlet}}
