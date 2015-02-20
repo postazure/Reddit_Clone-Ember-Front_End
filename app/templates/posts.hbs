@@ -1,8 +1,11 @@
 <h4>Posts</h4>
+{{#link-to "posts.new"}}New Post{{/link-to}}
 {{#each post in model}}
   {{#link-to "posts.show" post}}
     {{post.title}}
   {{/link-to}}
 {{/each}}
 
-{{outlet}}
+<div>
+  {{outlet}}
+</div>
