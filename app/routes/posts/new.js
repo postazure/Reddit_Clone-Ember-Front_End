@@ -11,6 +11,8 @@ export default Ember.Route.extend({
       post.save().then(function  () {
         _this.transitionTo("posts.show", post)
       });
-    }
+    },
+
+    
   }
 });

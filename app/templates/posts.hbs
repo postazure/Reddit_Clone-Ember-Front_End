@@ -1,10 +1,16 @@
 <h4>Posts</h4>
 {{#link-to "posts.new"}}New Post{{/link-to}}
+<ul>
+    
 {{#each post in model}}
+  <li>
   {{#link-to "posts.show" post}}
     {{post.title}}
   {{/link-to}}
+  <span {{action "deletePost" post}}>[X]</span>
+  </li>
 {{/each}}
+</ul>
 
 <div>
   {{outlet}}
