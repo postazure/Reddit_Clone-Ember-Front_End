@@ -6,7 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('posts', function() {});
+  this.resource('posts', function() {
+    this.route('show', {path: "/:post_id"});
+  });
   this.resource('comments', function() {});
 });
 
