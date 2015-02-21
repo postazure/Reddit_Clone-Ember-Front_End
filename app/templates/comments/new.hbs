@@ -1,0 +1,9 @@
+<h4>New Comment</h4>
+
+
+<label>Username</label>
+{{input type=text value=model.username}}
+<label>Body</label>
+{{input type=text value=model.body}}
+ 
+<button {{action "createComment" model}}>Submit Comment</button>

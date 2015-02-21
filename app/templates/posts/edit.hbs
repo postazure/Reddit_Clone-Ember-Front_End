@@ -1,0 +1,15 @@
+<h4>Edit Post</h4>
+
+<label>Title</label>
+{{input type="text" value=model.title}}
+
+<label>Username</label>
+{{input type="text" value=model.username}}
+
+<label>Link</label>
+{{input type="text" value=model.link}}
+
+<label>Description</label>
+{{input type="text" value=model.description}}
+
+<button {{action "updatePost" model}}>Create Post</button>

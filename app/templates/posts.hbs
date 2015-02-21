@@ -8,6 +8,7 @@
     {{post.title}}
   {{/link-to}}
   <span {{action "deletePost" post}}>[X]</span>
+  {{#link-to "posts.edit" post}}[E]{{/link-to}}
   </li>
 {{/each}}
 </ul>

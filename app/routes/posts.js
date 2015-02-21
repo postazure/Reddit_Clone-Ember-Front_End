@@ -9,7 +9,10 @@ export default Ember.Route.extend({
     deletePost: function  (post) {
       post.deleteRecord();
       post.save();
-      // console.log("delete post")
+    },
+
+    editPost: function  (post) {
+      console.log("edit")
     }
   }
 

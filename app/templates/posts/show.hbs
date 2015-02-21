@@ -3,5 +3,5 @@ Post Show
 {{#each comment in model.comments}}
   <p>{{comment.body}} - {{comment.username}}</p>
 {{/each}}
-
+{{#link-to "comments.new"}}Add a Comment{{/link-to}}
 {{outlet}}
