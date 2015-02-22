@@ -1,9 +1,3 @@
 <h4>Edit Comment</h4>
-{{log model}}
-
-<label>Body</label>
-{{input type=text value=model.body}}
-<label>Username</label>
-{{input type=text value=model.username}}
- 
-<button {{action "saveComment" model}}>Submit Comment</button>
+{{partial "comments/form"}}
+<button {{action "saveComment" model}}>Update Comment</button>

@@ -5,7 +5,4 @@ export default Ember.Route.extend({
     var post = this.modelFor('posts/show')
     return this.store.createRecord('comment', {post: post});
   },
-
-  
-
 });

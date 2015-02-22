@@ -1,9 +1,4 @@
 <h4>New Comment</h4>
-
-
-<label>Body</label>
-{{input type=text value=model.body}}
-<label>Username</label>
-{{input type=text value=model.username}}
+{{partial "comments/form"}}
  
-<button {{action "saveComment" model}}>Submit Comment</button>
+<button {{action "saveComment" model}}>Create Comment</button>
