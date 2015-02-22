@@ -2,15 +2,18 @@
 <div class="ui grid">
   <div class="four wide column">
     {{#link-to "posts.new"}}New Post{{/link-to}}
+    <div class="ui link list">
     {{#each post in model}}
-      <div>
-      {{#link-to "posts.show" post}}
+      
+      <span>
+      {{#link-to "posts.show" post classNames="item"}}
         {{post.title}}
       {{/link-to}}
-      <span {{action "deletePost" post}}>[X]</span>
-      {{#link-to "posts.edit" post}}[E]{{/link-to}}
-      </div>
+      <a {{action "deletePost" post}}><i class="remove icon"></i></a>
+      {{#link-to "posts.edit" post}}<i class="pencil icon"></i>{{/link-to}}
+      </span>
     {{/each}}
+    </div>
     
   </div>
 

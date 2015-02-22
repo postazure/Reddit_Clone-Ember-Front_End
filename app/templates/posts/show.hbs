@@ -8,9 +8,9 @@
     
     <div class="ui secondary segment">
       "{{comment.body}}" by {{comment.username}}
-      <span {{action "deleteComment" comment}}>[X]</span>
+      <a {{action "deleteComment" comment}}><i class="remove icon"></i></a>
       
-      {{#link-to "comments.edit" comment}}[E]{{/link-to}}
+      {{#link-to "comments.edit" comment}}<i class="pencil icon"></i>{{/link-to}}
     </div>
   {{/each}}
   
