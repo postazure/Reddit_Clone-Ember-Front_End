@@ -8,7 +8,10 @@ export default Ember.Route.extend({
   actions: {
     deletePost: function  (post) {
       post.deleteRecord();
-      post.save();
+      var _this = this;
+      post.save().then(function  () {
+        _this.transitionTo("posts")
+      });
     },
     savePost: function  (post) {
       var _this = this;
