@@ -12,9 +12,10 @@ Router.map(function() {
     this.route('edit', {path: "/:post_id/edit"});
     this.resource('comments', function() {
       this.route('new');
+      this.route('edit', {path: "/:comment_id/edit"});
     });
   });
-  
+
 });
 
 export default Router;

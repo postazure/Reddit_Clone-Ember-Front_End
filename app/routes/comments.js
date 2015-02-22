@@ -6,12 +6,14 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    createComment: function  (comment) {
+    saveComment: function  (comment) {
       var post = comment.get("post");
       var _this = this;
       comment.save().then(function(){
         _this.transitionTo('posts.show', post)
       });
-    }
+    },
+
+    
   }
 });

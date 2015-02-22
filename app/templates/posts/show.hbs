@@ -1,7 +1,16 @@
 Post Show
 <h3>{{title}}</h3>
+<p>{{description}}</p>
+<a {{bind-attr href=link}}>{{link}}</a>
+<div>
+<h4>Comments:</h4>
 {{#each comment in model.comments}}
-  <p>{{comment.body}} - {{comment.username}}</p>
+  <div>
+    {{comment.body}} - {{comment.username}}
+    <span {{action "deleteComment" comment}}>[X]</span>
+    {{#link-to "comments.edit" comment}}[E]{{/link-to}}
+  </div>
 {{/each}}
+</div>
 {{#link-to "comments.new"}}Add a Comment{{/link-to}}
 {{outlet}}

@@ -11,9 +11,7 @@ export default Ember.Route.extend({
       post.save();
     },
 
-    editPost: function  (post) {
-      console.log("edit")
-    }
+
   }
 
 });
