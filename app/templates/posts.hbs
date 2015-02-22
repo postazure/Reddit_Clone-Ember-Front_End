@@ -1,18 +1,23 @@
 <h4>Posts</h4>
-{{#link-to "posts.new"}}New Post{{/link-to}}
-<ul>
+<div class="ui grid">
+  <div class="four wide column">
+    {{#link-to "posts.new"}}New Post{{/link-to}}
+    {{#each post in model}}
+      <div>
+      {{#link-to "posts.show" post}}
+        {{post.title}}
+      {{/link-to}}
+      <span {{action "deletePost" post}}>[X]</span>
+      {{#link-to "posts.edit" post}}[E]{{/link-to}}
+      </div>
+    {{/each}}
     
-{{#each post in model}}
-  <li>
-  {{#link-to "posts.show" post}}
-    {{post.title}}
-  {{/link-to}}
-  <span {{action "deletePost" post}}>[X]</span>
-  {{#link-to "posts.edit" post}}[E]{{/link-to}}
-  </li>
-{{/each}}
-</ul>
+  </div>
 
-<div>
-  {{outlet}}
+  <div class="twelve wide column">
+    <div class="ui segment">
+      {{outlet}}
+    </div>
+  </div>
+
 </div>

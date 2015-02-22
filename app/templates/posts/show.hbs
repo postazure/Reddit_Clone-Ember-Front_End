@@ -1,17 +1,20 @@
-Post Show
 <h3>{{title}}</h3>
+<h4>by {{username}}</h4>
 <p>{{description}}</p>
 <a {{bind-attr href=link}}>{{link}}</a>
-<div>
-<h4>Comments:</h4>
-{{#each comment in model.comments}}
-  <div>
-    {{comment.body}} - {{comment.username}}
-    <span {{action "deleteComment" comment}}>[X]</span>
-    {{#link-to "comments.edit" comment}}[E]{{/link-to}}
-  </div>
-{{/each}}
-</div>
+{{#if model.comments}}
+  <h4>Comments:</h4>
+  {{#each comment in model.comments}}
+    
+    <div class="ui secondary segment">
+      "{{comment.body}}" by {{comment.username}}
+      <span {{action "deleteComment" comment}}>[X]</span>
+      
+      {{#link-to "comments.edit" comment}}[E]{{/link-to}}
+    </div>
+  {{/each}}
+  
+{{/if}}
 {{#link-to "comments.new"}}Add a Comment{{/link-to}}
 
 {{outlet}}
