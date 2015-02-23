@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
+  
   // actions: {
   //   deletePost: function  () {
   //     post = this.controllerFor("post").get("model")

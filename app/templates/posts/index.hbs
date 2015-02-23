@@ -1,0 +1,10 @@
+<h3>Posts</h3>
+{{#each post in model}}
+  <h4>
+    {{post.comments.length}} - 
+    {{#link-to "posts.show" post}}
+      {{post.title}} 
+    {{/link-to}}
+    - {{post.username}}
+  </h4>
+{{/each}}

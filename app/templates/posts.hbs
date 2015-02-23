@@ -1,18 +1,21 @@
-<h4>Posts</h4>
 <div class="ui grid">
   <div class="four wide column">
     {{#link-to "posts.new"}}New Post{{/link-to}}
-    <div class="ui link list">
-    {{#each post in model}}
-      
-      <div>
-      {{#link-to "posts.show" post classNames="item"}}
-        {{post.title}}
-      {{/link-to}}
-      <a {{action "deletePost" post}}><i class="remove icon"></i></a>
-      {{#link-to "posts.edit" post}}<i class="pencil icon"></i>{{/link-to}}
+    <div class="ui segment">
+      <div class="ui link list">
+      {{#each post in model}}
+        
+        <div>
+        {{#link-to "posts.show" post classNames="item"}}
+          {{post.title}}
+        {{/link-to}}
+        <a {{action "deletePost" post}}><i class="remove icon"></i></a>
+        {{#link-to "posts.edit" post}}<i class="pencil icon"></i>{{/link-to}}
+        </div>
+
+      {{/each}}
       </div>
-    {{/each}}
+
     </div>
     
   </div>
