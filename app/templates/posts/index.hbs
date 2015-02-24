@@ -1,7 +1,9 @@
 <h3>Posts</h3>
 {{#each post in model}}
   <h4>
-    {{post.comments.length}} - 
+    <div class="ui label">
+      <i class="comment icon"></i> {{post.comments.length}}
+    </div>
     {{#link-to "posts.show" post}}
       {{post.title}} 
     {{/link-to}}

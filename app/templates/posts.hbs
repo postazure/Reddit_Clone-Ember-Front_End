@@ -1,19 +1,25 @@
+
+
 <div class="ui grid">
   <div class="four wide column">
-    {{#link-to "posts.new"}}New Post{{/link-to}}
     <div class="ui segment">
       <div class="ui link list">
       {{#each post in model}}
         
         <div>
-        {{#link-to "posts.show" post classNames="item"}}
-          {{post.title}}
-        {{/link-to}}
-        <a {{action "deletePost" post}}><i class="remove icon"></i></a>
-        {{#link-to "posts.edit" post}}<i class="pencil icon"></i>{{/link-to}}
+          {{#link-to "posts.edit" post}}<i class="pencil icon"></i>{{/link-to}}
+          <a {{action "deletePost" post}}><i class="remove icon"></i></a>
+
+          {{#link-to "posts.show" post classNames="item"}}
+            {{post.title}}
+          {{/link-to}}
+
         </div>
 
+
       {{/each}}
+
+      {{#link-to "posts.new"}}New Post{{/link-to}}
       </div>
 
     </div>
